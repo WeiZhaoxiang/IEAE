@@ -1,0 +1,25 @@
+device: 2
+num_workers: 16
+
+d_para: 5 # 计算参数维度
+d_coor: 2 # 坐标维度
+d_f: 1 # 解函数维度
+d_v: 196 # 嵌入速度维度
+n_list: [5000, 2500, 1250, 640] # 采样点数量
+n_act: 12 # 隐空间作用层数
+n_head: 4 # 解码头层数
+
+dt: 0.01
+
+lr: 0.001
+epochs: 500 # 总训练轮数
+T_warm: 10 # 每个余弦退火的周期
+max_iters: 200 # 每轮最大迭代次数
+batch: 64
+thre_B: 0.002
+thre_P: 6
+buff_max: 30
+save_interval: 2 # 保存模型的间隔
+
+dataset: /nfs/Wei/NC5/data/Heat
+savepath: /nfs/Wei/NC5/Heat2D
